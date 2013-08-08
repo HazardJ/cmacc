@@ -1,0 +1,120 @@
+CommonAccord -- Public law, private data
+
+Overview and Technical Specification 
+Crowd-sourced from:
+@hazardj
+________ (your name here)
+  
+For background, see:
+commonaccord.wordpress.com
+ 
+THE GOALS:
+
+Legal operating systems that render into whatever legal doc you need, public and private, domestic and international, forked and merged.
+
+To:
+  make legal solutions immediately available to everyone
+  open source the software of transacting
+  return control of dealings and data to participants
+  eliminate documents (an impediment to dealing and management)
+  make information semantically searchable
+
+E.g., enable:
+  rapid, secure, collaborative dealing
+  better confidentiality
+  better knowledge management
+  direct access to legal "reality"
+  systematized decision-making
+  peer-to-peer e-commerce without hubs
+  comprehensive descriptions of relationships among persons
+ 
+Basic architecture:
+ 
+  A data model implemented in different formats and systems, interoperating:
+  Wikis for forms and libraries (wide collaboration)
+  Tables on web pages (e.g., contact info and product offerings)
+  Email threads (versioned objects for transacting)
+  Local files (word processing)
+  Integration with databases and other systems
+  Integration with authoring systems
+  Rendering will often be done on the client side, in an app, application or command line.
+ 
+HOW TO HELP:
+ 
+Make contributions of tech or text (see below).   
+Support a structure for CommonAccord.org. 
+Use the data model and the legal code.
+Talk to folks who “own” part of the problem -- corporate counsel, small business, do-gooders.
+  
+AREAS OF WORK:
+ 
+Improve the data model and implement the semantic web (described below)
+Models of legal forms, libraries, naming schemes
+Formats for data such as addresses, things, persons
+Governance
+ 
+
+
+See Technical Specification - next page
+
+TECHNICAL SPECIFICATION:
+
+Below are examples of (i) a document, (ii) an index.  Somewhat more advanced than currently implemented.  
+
+NameSpace = Each pair (key/value) in (i) the list and (ii) each other list referenced in the list (iii) recursively.
+
+Note that the method of determining the NameSpace must be frugal.  There can be circularity in lists referencing one another (many circumstances in which this is correct) and some lists will reference many other lists.  (Circularity between two fields is an error.)   
+
+The NameSpace is organized three ways:
+1a.  By key:  (primary method)  Each key in the list and each key in each included list is part of the NameSpace.  If the included list is prefixed, then each key in the included list is prefixed (recursively).  If the prefix for the list is /commented/, then each key is also included without the prefix.  There may be (will be) multiple keys with the same name.  The bottom-most one wins.  It is as if the system read up from the bottom and stopped at the first matching key.
+1b.  The second priority key can be accessed by a suffix .-1.
+2.  Each key can be addressed by position in the list -- {3:2:Name.Full} returns “Y-Combinator”.  
+3.  @YCombinator.Name.Full returns “Y-Combinator”.  To deal with spaceless uses, the notation can also be “nowadays {@YCombinator.Name.Full}s are popping up ….”
+
+A list (document) is “frozen” when each @Person, #Thing and &Form used in rendering the list has been reduced to a %GUID.  Otherwise, it is “fluid.”
+
+The two lists below can be merged. 
+
+Let's improve on this.  
+(This looks awkward in the raw text format.  It looks pretty good in an email, using outlining.)
+
+CMACC/ &MyDeal #000223
+1. Doc.Body=<center>{Agt.Prologue}</center><ol><li>{Agt._Sec.S}</li></ol>{Agt.Signature}</br>{Agt.Attachment}
+  1. Agt.
+    1. Prologue={Title}</br>between {Pcpl.Name.Full} and {Cttr.Name.Full}
+2. /Parties/
+  1. Pcpl. 
+    1. @AcmeInc
+  2. Cttr.
+    1. @YCombinator
+3. /Form/
+  1. &YCombinator_SeriesAA_Pref_Closing_Docs // if ok with you
+  2. Dispute.
+    1. &Juris_Court_USA_CA_SanJose // our preference
+/CMACC
+
+An index of documents:
+Items in {{2xbraces}} are expanded before evaluation of the NameSpace
+
+CMACC/  #000101
+1. Beta=beta.commonaccord.org
+2. BetaID=http://{{Beta}}/w/index.php?title=Main_Page&action=edit&oldid=
+3. &Juris_Court_USA_CA_SanJose 
+  1. {{BetaID}}4774
+  2. {{BetaID}}4779
+  3. {{BetaID}}4780
+4. @AcmeInc
+  1.%000033
+  2.%000034
+5. @YCombinator
+  1.%000055
+  2.%000076
+/CMACC
+
+It is possible but not necessary to make it one list per page, for instance in a wiki (conflate the notions of pages and lists).  And therefore to make the wiki page naming system be a proxy for an index.  Mediawiki matches a URL with a GUID (permanent id).  
+
+There is a visual metaphor of a succession of semi-transparent pages or screens, one in front of the other.  The user opens a list - which is screen 1, and each included list is a screen half-behind screen 1.  As soon as you start work, there is a virtual list 0 (and screen) that saves the work.  A commit saves that list 0 and repoints list 1 to the new list.  One can commit as a new version of list 1 (if one has privileges) or give the list a new name.  The versioning of the index could be done (i) locally in the new list, (ii) by creating a new index that versions the prior index, or (iii) by adding at the bottom of the existing index (with metadata about author and time).  (i) and (iii) seem appropriate in different circumstances.  (ii) seems pure but complicated?
+
+Other functions.
+
+There is a need for other functions, such as spreadsheet-like automation (sums, averages, etc.) and database accesses (list of products or customers).  Rather than create a new vocabulary, one should simply pass a {! token} to a list that is an interface for a programming language or database.  Lisp seems to fit nicely for programming, but others may have different choices.
