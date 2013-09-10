@@ -11,12 +11,11 @@ commonaccord.wordpress.com
 THE GOALS:
 
 Legal operating systems that render into whatever legal doc you need, public and private, domestic and international, forked and merged.
-
+Think of a stylesheet that renders your term sheet into full legal texts.  
 To:
   make legal solutions immediately available to everyone
   open source the software of transacting
   return control of dealings and data to participants
-  eliminate documents (an impediment to dealing and management)
   make information semantically searchable
 
 E.g., enable:
@@ -29,8 +28,8 @@ E.g., enable:
   comprehensive descriptions of relationships among persons
  
 Basic architecture:
- 
-  A data model implemented in different formats and systems, interoperating:
+
+  A data model implemented in various formats and systems, interoperating.  E.g.,:
   Wikis for forms and libraries (wide collaboration)
   Tables on web pages (e.g., contact info and product offerings)
   Email threads (versioned objects for transacting)
@@ -71,7 +70,7 @@ The NameSpace is organized three ways:
 2.  Each key can be addressed by position in the list -- {3:2:Name.Full} returns “Y-Combinator”.  
 3.  @YCombinator.Name.Full returns “Y-Combinator”.  To deal with spaceless uses, the notation can also be “nowadays {@YCombinator.Name.Full}s are popping up ….”
 
-A list (document) is “frozen” when each @Person, #Thing and &Form used in rendering the list has been reduced to a %GUID.  Otherwise, it is “fluid.”
+A list (document) is “frozen” when each @List (@Person, @Thing, @Form) used in rendering the list has been reduced to a @GUID.  Otherwise, it is “fluid.”
 
 The two lists below can be merged. 
 
@@ -104,11 +103,11 @@ CMACC/  #000101
   2. {{BetaID}}4779
   3. {{BetaID}}4780
 4. @AcmeInc
-  1.%000033
-  2.%000034
+  1.@000033
+  2.@000034
 5. @YCombinator
-  1.%000055
-  2.%000076
+  1.@000055
+  2.@000076
 /CMACC
 
 It is possible but not necessary to make it one list per page, for instance in a wiki (conflate the notions of pages and lists).  And therefore to make the wiki page naming system be a proxy for an index.  Mediawiki matches a URL with a GUID (permanent id).  
