@@ -6,7 +6,8 @@ Crowd-sourced from:
 ________ (your name here)
   
 For background, see:
-commonaccord.wordpress.com and beta.commonaccord.org/wiki
+commonaccord.wordpress.com and beta.commonaccord.org/wiki  see some examples at http://lun-sandbox-cma-concept1.appspot.com/document/Tree_DocList
+
  
 THE GOALS:
 
@@ -125,6 +126,9 @@ Items in square brackets embedded between curly braces are evaluated before the 
 It is possible but not necessary to make it one list per page, for instance in a wiki (conflate the notions of pages and lists).  And therefore to make the wiki page naming system be a proxy for an index.  Mediawiki matches a URL with a GUID (permanent id).  
 
 There is a visual metaphor of a succession of semi-transparent pages or screens, one in front of the other.  The user opens a list - which is screen 1, and each included list is a screen half-behind screen 1.  As soon as you start work, there is a virtual list 0 (and screen) that saves the work.  A commit saves that list 0 and repoints list 1 to the new list.  One can commit as a new version of list 1 (if one has privileges) or give the list a new name.  The versioning of the index could be done (i) locally in the new list, (ii) by creating a new index that versions the prior index, or (iii) by adding at the bottom of the existing index (with metadata about author and time).  (i) and (iii) seem appropriate in different circumstances.  (ii) seems pure but complicated?
+
+Meta data:
+The same data model can be used for its own versioning, organizing lists in non-exclusive trees, tagging.  This keeps it uniform and fully distributed.  It also avoids unnecessary exclusivity of tree organization and the like.
 
 Other functions:
 
