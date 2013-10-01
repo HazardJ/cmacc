@@ -13,13 +13,12 @@ THE GOALS:
 
 Make lists and outlines, not documents!
 
-A general system of editing and managing documents that has the versioning features of git and the semantics of multiple inheritance.  Permitting users to create documents and pages by short outlines that render into the full desired text.  
+A general system of editing and managing documents that has the versioning features of git and the semantics of multiple inheritance.  Permitting users to create, negotiate and manage documents and pages as short outlines that render into the full text.  
 
-Legal content that renders into whatever doc you need.  
 
 Thereby:
   making legal solutions immediately available to everyone
-  open sourcing the software of transacting
+  open sourcing the content and software of transacting
   returning control of dealings and data to participants
   making information semantically searchable
 
@@ -66,6 +65,17 @@ TECHNICAL SPECIFICATION:
 
 Below are examples of (i) a document, (ii) an index.  These are somewhat more advanced than currently implemented.  
 
+Rendering a list (or nested lists - an outline) into a document consists of (a) creating enough of its NameSpace and (b) substituting {spans} of text based on key/values in the NameSpace.
+
+Substitutions can be done at four levels:
+
+  1.  Make substitutions for {{Spans}} in the list;
+  2.  Make substitutions for [Spans] inside of {Spans}, e.g. {[Buyer].Name.Full}  becomes {Acme.Name.Full}
+  3.  Make substitutions for {Spans}
+  4.  On the fully rendered text, "hard-overrides" -- pure substitutions -- notably to deal with some </li></ol>;</li></ol> issues and for "{Acme.Name.Full}." where "Acme.Name.Full=Acme Corp." Creates a double period.  These are like search and replace and can have unforeseen effects.  Use sparingly.  
+  
+
+In each case
 NameSpace = Each pair (key/value) in (i) the list and (ii) each other list referenced in the list (iii) recursively.
 
 Note that the method of exploring the NameSpace must be frugal.  There can be circularity in lists referencing one another (many circumstances in which this is correct) and some lists will reference many other lists.  (Circularity between two fields is an error.)   
