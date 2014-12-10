@@ -1,3 +1,7 @@
+
+=[core/class/ID_He]
+
+
 Name.First=James
 
 Name.Last=Hazard
