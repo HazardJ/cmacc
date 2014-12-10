@@ -23,8 +23,6 @@ Nationality=United States of America
 
 =[core/class/ID_He]
 
-=[core/at/FR/Paris/Geo]
-
 
 Name.Maiden/Other=None
 
