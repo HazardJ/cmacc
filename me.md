@@ -1,6 +1,7 @@
 
 =[core/class/ID_He]
 
+=[core/at/FR/Paris/Geo]
 
 Name.First=James
 
@@ -12,15 +13,7 @@ Name.M=G
 
 Addr.1=40 rue Lauriston
 
-Addr.City=Paris
-
 Addr.Zip=75116
-
-Addr.ST=<b></b>
-
-Addr.UK=FR
-
-Addr.Nation=France
 
 Addr.Type=temporary
 
