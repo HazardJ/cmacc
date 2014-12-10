@@ -9,6 +9,8 @@ Name.M=G
 
 Name.Full={Name.First} {Name.M} {Name.Last}
 
+Addr.Type=mailing
+
 Addr.1,2=ON REQUEST
 
 LinkedIn.Handle=jameshazard
