@@ -13,9 +13,14 @@ Addr.Type=mailing
 
 Addr.1,2=ON REQUEST
 
+ListType={N/A/L/G/T}
+
 LinkedIn.Handle=jameshazard
 
 GitHub.Handle=hazardj
+
+Twitter.Handle=hazardj
+
 
 Twitter.Followers=116
 
