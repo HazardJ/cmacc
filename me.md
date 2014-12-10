@@ -11,6 +11,8 @@ Name.Middle=Gardiner
 
 Name.M=G
 
+Name.Full={Name.First} {Name.M} {Name.Last}
+
 Addr.1=40 rue Lauriston
 
 Addr.Zip=75116
