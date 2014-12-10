@@ -21,7 +21,6 @@ GitHub.Handle=hazardj
 
 Twitter.Handle=hazardj
 
-
 Twitter.Followers=116
 
 Phone=650.454.5007
@@ -31,3 +30,5 @@ Email=james.g.hazard@gmail.com
 Fax=650.204.9101
 
 =[core/class/ID_He]
+
+SomethingToSay=If you are a corporate lawyer type (!) check out <a href="http://commonaccord.org/index.php?action=source&file=/01/Agt/Sec/Rep/Startup/Compilation.md">Compilation of Reps</a>
