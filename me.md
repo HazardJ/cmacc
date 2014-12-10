@@ -1,8 +1,4 @@
 
-=[core/class/ID_He]
-
-=[core/at/FR/Paris/Geo]
-
 Name.First=James
 
 Name.Last=Hazard
@@ -24,6 +20,11 @@ Email=james.g.hazard@gmail.com
 Fax=650.204.9101
 
 Nationality=United States of America
+
+=[core/class/ID_He]
+
+=[core/at/FR/Paris/Geo]
+
 
 Name.Maiden/Other=None
 
