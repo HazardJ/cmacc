@@ -13,9 +13,11 @@ Name.M=G
 
 Name.Full={Name.First} {Name.M} {Name.Last}
 
-Addr.1=40 rue Lauriston
+Adr.1=40 rue Lauriston
 
-Addr.Zip=75116
+Adr.Zip=75116
+
+Adr.Ville=Paris
 
 Addr.Type=temporary
 
