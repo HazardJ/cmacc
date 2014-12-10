@@ -21,6 +21,8 @@ Adr.Ville=Paris
 
 Addr.Type=temporary
 
+Addr.1,2={Adr.1,2}
+
 Twitter.Followers=116
 
 Phone=650.454.5007
