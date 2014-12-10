@@ -11,9 +11,9 @@ Name.Full={Name.First} {Name.M} {Name.Last}
 
 Addr.1,2=ON REQUEST
 
-LinkedIn=jameshazard
+LinkedIn.Handle=jameshazard
 
-GitHub=hazardj
+GitHub.Handle=hazardj
 
 Twitter.Followers=116
 
