@@ -11,6 +11,10 @@ Name.Full={Name.First} {Name.M} {Name.Last}
 
 Addr.1,2=ON REQUEST
 
+LinkedIn=jameshazard
+
+GitHub=hazardj
+
 Twitter.Followers=116
 
 Phone=650.454.5007
