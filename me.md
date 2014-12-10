@@ -30,11 +30,4 @@ Email=james.g.hazard@gmail.com
 
 Fax=650.204.9101
 
-Nationality=United States of America
-
 =[core/class/ID_He]
-
-
-Name.Maiden/Other=None
-
-DOB=TBD
