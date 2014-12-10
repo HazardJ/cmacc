@@ -3,7 +3,7 @@
 
 =[core/at/FR/Paris/Geo]
 
-Name.First=Jacko
+Name.First=James
 
 Name.Last=Hazard
 
@@ -13,15 +13,7 @@ Name.M=G
 
 Name.Full={Name.First} {Name.M} {Name.Last}
 
-Adr.1=40 rue Lauriston
-
-Adr.Zip=75116
-
-Adr.Ville=Paris
-
-Addr.Type=temporary
-
-Addr.1,2={Adr.1,2}
+Addr.1,2=ON REQUEST
 
 Twitter.Followers=116
 
